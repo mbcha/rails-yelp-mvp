@@ -1,0 +1,11 @@
+<h1>Add a new restaurant</h1>
+
+<%= simple_form_for(@restaurant) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :phone_number %>
+    <%= f.input :category, collection: Restaurant::SUPPORTED_CATEGORIES %>
+    <%= f.submit class: "btn btn-danger"%>
+<% end %>
+
+<p><%= link_to "Go back to list", root_path %></p>

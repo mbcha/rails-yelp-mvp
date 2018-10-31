@@ -1,3 +1,5 @@
+# rubocop:disable all
+
 class Review < ApplicationRecord
   belongs_to :restaurant
 
